@@ -39,5 +39,5 @@ The `mise lock node` artifact step then processes `node@24.21.0, node@22.23.3, n
 
 ## Links
 
-- Discussion: TODO
+- Discussion: https://github.com/renovatebot/renovate/discussions/46551
 - Proposed fix: https://github.com/renovatebot/renovate/pull/46407
