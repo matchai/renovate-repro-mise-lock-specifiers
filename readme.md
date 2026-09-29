@@ -21,6 +21,22 @@ Each configured selector is matched to the lockfile entry whose `specifiers` con
 
 The [`renovate` workflow](.github/workflows/renovate.yml) runs Renovate CLI 44.119.0 against this repository with `LOG_LEVEL=debug`.
 
+Result on Renovate 44.119.0:
+
+- PR: [#1 Update dependency node to v24](https://github.com/matchai/renovate-repro-mise-lock-specifiers/pull/1), `20.20.2` -> `v24.21.0` (major)
+- Debug log: [workflow run 36562298518](https://github.com/matchai/renovate-repro-mise-lock-specifiers/actions/runs/36562298518)
+
+The extracted dependency pairs the `24` selector with the Node 20 entry:
+
+```json
+"currentValue": "24",
+"lockedVersion": "20.20.2",
+"rangeStrategy": "update-lockfile",
+"isLockfileOnly": true
+```
+
+The `mise lock node` artifact step then processes `node@24.21.0, node@22.23.3, node@24.21.0`, so Node 20 is dropped from `mise.lock`.
+
 ## Links
 
 - Discussion: TODO
