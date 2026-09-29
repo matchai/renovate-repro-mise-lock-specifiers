@@ -1,0 +1,16 @@
+lockfile_version = 2
+
+[[tools.node]]
+version = "20.20.2"
+backend = "core:node"
+specifiers = ["20"]
+
+[[tools.node]]
+version = "24.21.0"
+backend = "core:node"
+specifiers = ["24"]
+
+[[tools.node]]
+version = "22.23.3"
+backend = "core:node"
+specifiers = ["22"]
